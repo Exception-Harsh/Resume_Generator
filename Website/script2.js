@@ -123,7 +123,7 @@ function generateCV() {
         document.getElementById("imgT").src = reader.result;
     };
 
-    document.getElementById("cv-form").style2.display = 'none';
+    document.getElementById("cv-form").style.display = 'none';
     document.getElementById("cv-template").style.display = 'block';
 }
 
