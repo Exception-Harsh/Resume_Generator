@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(254, 255, 255);
+    background-color: rgb(114, 180, 193);
 }
 
 #cv-template {
@@ -13,11 +13,11 @@ body {
 }
 
 .background {
-    background-color: rgb(157, 213, 224);
+    background-color: rgb(200, 211, 199);
 }
 
 .background1 {
-    background-color: rgb(157, 213, 224);
+    background-color: rgb(112, 196, 213);
 }
 
 .color {
@@ -25,6 +25,18 @@ body {
 }
 
 .button {
+    background-color: #555555;
+    border-radius: 70%;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .button1 {
     background-color: #555555;
     border-radius: 70%;
     border: none;

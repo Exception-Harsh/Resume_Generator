@@ -3,7 +3,7 @@ function addNewWEField() {
     newNode.classList.add("form-control");
     newNode.classList.add("weField");
     newNode.classList.add('mt-2');
-    newNode.setAttribute("rows", 3);
+    newNode.setAttribute("rows", 2);
     newNode.setAttribute("placeholder", "Enter Here")
 
     let weOb = document.getElementById("we");
@@ -17,13 +17,41 @@ function addNewAQField() {
     newNode.classList.add("form-control");
     newNode.classList.add("aqField");
     newNode.classList.add("mt-2");
-    newNode.setAttribute("rows", 3);
+    newNode.setAttribute("rows", 2);
     newNode.setAttribute("placeholder", "Enter Here")
 
     let aqOb = document.getElementById("aq");
     let aqAddButtonOb = document.getElementById("aqAddButton");
 
     aqOb.insertBefore(newNode, aqAddButtonOb);
+}
+
+function addNewSKField() {
+    let newNode = document.createElement("textarea");
+    newNode.classList.add("form-control");
+    newNode.classList.add("skField");
+    newNode.classList.add('mt-2');
+    newNode.setAttribute("rows", 1);
+    newNode.setAttribute("placeholder", "Enter Here")
+
+    let skOb = document.getElementById("sk");
+    let skAddButtonOb = document.getElementById("skAddButton");
+
+    skOb.insertBefore(newNode, skAddButtonOb);
+}
+
+function addNewACHField() {
+    let newNode = document.createElement("textarea");
+    newNode.classList.add("form-control");
+    newNode.classList.add("achField");
+    newNode.classList.add('mt-2');
+    newNode.setAttribute("rows", 1);
+    newNode.setAttribute("placeholder", "Enter Here")
+
+    let achOb = document.getElementById("ach");
+    let achAddButtonOb = document.getElementById("achAddButton");
+
+    achOb.insertBefore(newNode, achAddButtonOb);
 }
 
 function generateCV() {
@@ -65,6 +93,22 @@ function generateCV() {
     }
     document.getElementById("aqT").innerHTML = str1;
 
+    let sks = document.getElementsByClassName("skField");
+    let str2 = "";
+
+    for (let e of sks) {
+        str2 = str2 + `<li> ${e.value} </li>`;
+    }
+    document.getElementById("skT").innerHTML = str2;
+
+    let achs = document.getElementsByClassName("achField");
+    let str3 = "";
+
+    for (let e of achs) {
+        str3 = str3 + `<li> ${e.value} </li>`;
+    }
+    document.getElementById("achT").innerHTML = str3;
+
     //code for Profile Picture
     let file = document.getElementById('imgField').files[0];
     console.log(file);
@@ -79,7 +123,7 @@ function generateCV() {
         document.getElementById("imgT").src = reader.result;
     };
 
-    document.getElementById("cv-form").style.display = 'none';
+    document.getElementById("cv-form").style2.display = 'none';
     document.getElementById("cv-template").style.display = 'block';
 }
 
